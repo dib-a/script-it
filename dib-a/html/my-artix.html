@@ -64,7 +64,45 @@
             <div class="text">From here we will dive into the new system</div>
             <div class="code">artix-chroot /mnt</div>
         </div>
-        <h2>2. Configuration</h2>
+        <div class="configuration">
+            <h2>2. Configuration</h2>
+            <div class="configure-system">
+                <h3>2.1 Configure System</h3>
+                <div class="text">First, let's download all programs needed</div>
+                <div class="code">sudo pamcan -Sy vim dhcpcd wpa_supplicant cryptsetup grub efibootmgr</div>
+                <div class="text">Setup the language<br>Here you have to uncomment (remove the # at the beginning of the line) the languages you want to use</div>
+                <div class="code">
+                    vim /etc/locale.gen<br>
+                    locale-gen
+                </div>
+                <div class="text">Setup the time</div>
+                <div class="code">
+                    ln -sf /usr/share/zoneinfo/Region/Town /etc/localtime<br>
+                    <br>
+                    ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime<br>
+                    hwclock --systohc --utc
+                </div>
+                <div class="text">Name the device and set the root password</div>
+                <div class="code">echo enterTheName > /etc/hostname<br>passwd</div>
+                <div class="text">
+                    Add the encrypt hook<br>
+                    Search for the Line that stats with HOOKS=()<br>
+                    In the line add encrypt bevor the filesystems Hook
+                </div>
+                <div class="code">vim /etc/mkinitcpio.conf<br> mkinitcpio -P</div>
+                <div class="text">
+                    setup the grub<br>
+                    Search for the Line that starts with GRUB_CMDLINE_LINUX=""<br>
+                    and add between the "": cryptdevice=/dev/sda4:SYSTEM root=/dev/mapper/SYSTEM
+                </div>
+                <div class="code">
+                    grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch --recheck<br>
+                    vim /etc/default/gtrub<br>
+                    grub-mkconfig -o /boot/grub/grub.cfg
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
