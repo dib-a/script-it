@@ -1,0 +1,31 @@
+:root{
+    --color-green-dark:#26a269;
+    --color-green:#2ec27e;
+    --color-green-light:#33d17a;
+    --color-gray-dark:#241f31;
+    --color-gray:#3d3846;
+    --color-gray-light:#5e5c64;
+    --color-font:#ffffff;
+}
+
+body{
+    background-color: var(--color-gray);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color: var(--color-gray-dark);
+    padding: 20px 60px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: var(--color-font);
+    padding: 4px 6px;
+}
+
+.navbar a:hover{
+    border-bottom: 1px solid var(--color-font);
+}
