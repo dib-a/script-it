@@ -1,0 +1,25 @@
+@import url(master.css);
+
+.table-of-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    border: 2px solid var(--color-font);
+    padding: 10px;
+}
+
+.table-of-content a {
+    padding: 4px 0px;
+}
+
+.text {
+    margin: 5px 0px;
+}
+
+.code {
+    margin: 20px 0px;
+    border: 1px solid var(--color-font);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--color-gray-light);
+}

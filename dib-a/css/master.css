@@ -1,11 +1,13 @@
 :root {
     --color-green:#26a269;
     --color-gray:#241f31;
+    --color-gray-light:#3d3846;
     --color-font:#ffffff;
 }
 
 body {
     background-color: var(--color-gray);
+    color: var(--color-font);
     font-family: "IBM Plex Sans Arabic";
     margin: 0;
     padding: 0;
@@ -19,15 +21,23 @@ body {
     justify-content: space-between;
 }
 
-.navbar-right a {
-    text-decoration: none;
-    font-size: 18px;
+.navbar a{
     font-weight: 700;
+}
+
+
+.main {
+    margin: 5px 40px ;
+}
+
+
+.text-in-a a{
+    text-decoration: none;
     color: var(--color-font);
     padding: 4px 6px;
     border-bottom: 1px solid transparent;
 }
 
-.navbar-right a:hover {
+.text-hover a:hover {
     border-bottom: 1px solid var(--color-font);
 }

@@ -10,6 +10,7 @@
 
     <!--css-->
     <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/my-artix.css">
 
     <!--favicon-->
     <link rel="icon" type="image/x-icon" href="../src/images/logo.ico" style="border-radius: 100%;">
@@ -23,15 +24,47 @@
         <div class="navbar-left">
             <a href="../index.html"><img src="../src/images/logo.png" alt="Logo"></a>
         </div>
-        <div class="navbar-right">
+        <div class="navbar-right text-in-a text-hover">
             <a href="../index.html">Home</a>
-            <a href="html/my-artix.html">My Artix</a>
+            <a href="my-artix.html">My Artix</a>
         </div>
     </div>
     <div class="main">
-        <div class="table-of-content">
-            <a href="#installation">Installation</a>
+        <div class="table-of-content text-in-a text-hover">
+            <a href="">1. Installation</a>
+            <a href="">2. Configuration</a>
         </div>
+        <div class="installation">
+            <h2>1. Installation</h2>
+            <div class="text">First you have to format the disk, you can use:</div>
+            <div class="code">sudo fdisk /dev/sdX</div>
+            <div class="text">Of course, you have to change the X to the path of your Disk</div>
+            <div class="text">For this Installation, we will go with this partition:</div>
+            <div class="code">
+                <ul>
+                    <li>/dev/sda1 300MB EFI</li>
+                    <li>/dev/sda2 300MB BOOT</li>
+                    <li>/dev/sda3 8GB SWAP</li>
+                    <li>/dev/sda4 all GB left SYSTEM</li>
+                </ul>
+            </div>
+            <div class="text">Now we can make the file systems and encrypt the SYSTEM partition</div>
+            <div class="code">
+                mkfs.vfat -F 32 -n EFI /dev/sda1<br>
+                mkfs.ext4 -L BOOT /dev/sda2<br>
+                mkswap -L SWAP /dev/sda3<br>
+                <br>
+                cryptsetup -v -y --cipher aes-xts-plain64 --key-size 256 --hash sha256 --iter-time 2000 --use-urandom --verify-passphrase luksFormat /dev/sda4<br>
+                cryptsetup open /dev/sda4 SYSTEM<br>
+                <br>
+                mkfs.ext4 -L SYSTEM /dev/mapper/SYSTEM
+            </div>
+            <div class="text">Install the base system and kernel</div>
+            <div class="code">basestrap /mnt base base-devel openrc elogind-openrc linux linux-firmware</div>
+            <div class="text">From here we will dive into the new system</div>
+            <div class="code">artix-chroot /mnt</div>
+        </div>
+        <h2>2. Configuration</h2>
     </div>
 </body>
 </html>
