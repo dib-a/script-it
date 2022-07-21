@@ -31,8 +31,14 @@
     </div>
     <div class="main">
         <div class="table-of-content text-in-a text-hover">
-            <a href="">1. Installation</a>
-            <a href="">2. Configuration</a>
+            <ul>
+                <li><a href="">1. Installation</a></li>
+                <li><a href="">2. Configuration</a></li>
+                <ul>
+                    <li><a href="">2.1 Configure System</a></li>
+                    <li><a href="">2.2 Add User</a></li>
+                </ul>
+            </ul>
         </div>
         <div class="installation">
             <h2>1. Installation</h2>
@@ -101,6 +107,14 @@
                     grub-mkconfig -o /boot/grub/grub.cfg
                 </div>
             </div>
+            <div class="add-user">
+                <h3>2.2 Add User</h3>
+                <div class="text">To give the group wheel the rights to use sudo you have to uncomment the line %wheel ALL=(ALL:ALL) ALL</div>
+                <div class="code">vim /etc/sudoers</div>
+                <div class="text">Add user to the group wheel (of course you need to change user-name to the name of the user)</div>
+                <div class="code">useradd -mG wheel user-name</div>
+                <div class="text">Give the user a password</div>
+                <div class="code">passwd user-name</div>
             </div>
         </div>
     </div>

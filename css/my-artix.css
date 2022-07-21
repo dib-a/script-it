@@ -3,13 +3,17 @@
 .table-of-content {
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    max-width: 300px;
     border: 2px solid var(--color-font);
     padding: 10px;
 }
 
-.table-of-content a {
-    padding: 4px 0px;
+.table-of-content ul {
+    list-style-type:none;
+}
+
+.table-of-content ul li {
+    margin: 8px 0px;
 }
 
 .text {
