@@ -33,9 +33,3 @@
 .split-3 > div a img {
     height: 50px;
 }
-
-.center-items {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-}

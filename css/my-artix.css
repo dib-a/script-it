@@ -3,7 +3,6 @@
 .table-of-content {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
     border: 2px solid var(--color-font);
     padding: 10px;
 }
@@ -26,4 +25,8 @@
     border-radius: 10px;
     padding: 10px;
     background-color: var(--color-gray-light);
+}
+
+.left-margin {
+    margin-left: 30px;
 }
