@@ -13,6 +13,9 @@ body {
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 .navbar {
     margin: 20px 60px;
     padding: 20px 60px;

@@ -2,6 +2,7 @@
 
 .split-2 {
     display: flex;
+    margin-bottom: 130px;
 }
 
 .right-side, .left-side {
@@ -17,4 +18,21 @@
     border-radius: 20px;
     padding: 5px 70px;
     font-weight: 700;
+}
+
+.split-4 {
+    display: flex;
+    margin: 100px 0px;
+}
+
+.split-4 > div {
+    width: 25%;
+    max-height: 200px;
+    padding: 20px;
+}
+
+.center-items {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
 }
