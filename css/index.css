@@ -1,0 +1,19 @@
+@import url(master.css);
+
+.split-2 {
+    display: flex;
+}
+
+.right-side, .left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 20px;
+}
+
+.right-side a {
+    background-color: var(--color-green);
+    border-radius: 20px;
+    padding: 5px 70px;
+}
