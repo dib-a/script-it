@@ -123,6 +123,9 @@
         <div class="add-arch-repo left-margin" id="add-arch-repo">
             <div class="text">The Arch repositories<br>(Notice that we changed the path from mirrorlist to mirrorlist-arch)</div>
             <div class="code">
+                [core]<br>
+                Include = /etc/pacman.d/mirrorlist-arch<br>
+                <br>
                 [extra]<br>
                 Include = /etc/pacman.d/mirrorlist-arch<br>
                 <br>
@@ -136,7 +139,7 @@
             <div class="code">sudo vim /etc/pacman.conf</div>
             <div class="text text-in-a text-hover ">
                 Now generate the mirrorlist for arch for that go to the
-                <a href="https://archlinux.org/mirrorlist/" target="_blank">Arch linux mirrorlist generator</a><br>
+                <a href="https://archlinux.org/mirrorlist/" target="_blank">Pacman Mirrorlist Generator</a><br>
                 Make sure to create a new file /etc/pacman.d/mirrorlist-arch and paste the mirrorlist in there
             </div>
             <div class="code">sudo vim /etc/pacman.d/mirrorlist-arch</div>
