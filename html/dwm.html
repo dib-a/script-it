@@ -60,7 +60,7 @@
                 git clone https://git.suckless.org/st
             </div>
             <h4>2.2 Complie the code</h4>
-            <div class="text">Enter every path to complie the code</div>
+            <div class="text">Enter every path to complie the code<br>If you do not like the st terminal feel free to change that</div>
             <div class="code">
                 cd dmenu<br>
                 sudo make clean install<br>
@@ -77,6 +77,19 @@
         </div>
         <h2>3. Configuration</h2>
         <div class="configuration left-margin" id="configuration">
+            <h4>3.1 Github</h4>
+            <div class="text">To configure dwm you can clone our config from Github</div>
+            <div class="code">cd ~/progs<br>git clone https://github.com/dib-a/dwm-config.git</div>
+            <div class="text">now replace the old dwm config with the new one</div>
+            <div class="code"><!--Need to be optimated-->
+                cd ~/progs<br>
+                sudo rm dwm/config.h<br>
+                sudo cp dwm-config/src/configs/dwm.h dwm/config.h<br>
+                sudo cp dwm-config/src/configs/variables.h dwm/variables.h<br>
+                sudo rm st/config.h<br>
+                sudo cp dwm-config/src/configs/st.h st/config.h<br>
+                sudo cp dwm-config/src/configs/variables.h st/variables.h<br>
+            </div>
         </div>
     </div>
     <div class="footer">
