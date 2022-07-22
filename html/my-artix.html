@@ -36,6 +36,7 @@
                     <li><a href="#installation">1. Installation</a></li>
                     <li><a href="#configuration">2. Configuration</a></li>
                     <li><a href="#add-user">3. Add User</a></li>
+                    <li><a href="#add-arch-repo">4. Add Arch Repositories to Artix</a></li>
                 </ul>
             </div>
             <div class="os-logo center-items"><img src="../src/images/artix-logo.png" alt="Logo" class="logo-50px"></div>
@@ -117,6 +118,31 @@
             <div class="code">useradd -mG wheel user-name</div>
             <div class="text">Give the user a password</div>
             <div class="code">passwd user-name</div>
+        </div>
+        <h2>4. Add Arch Repositories to Artix</h2>
+        <div class="add-arch-repo left-margin" id="add-arch-repo">
+            <div class="text">The Arch repositories<br>(Notice that we changed the path from mirrorlist to mirrorlist-arch)</div>
+            <div class="code">
+                [core]<br>
+                Include = /etc/pacman.d/mirrorlist-arch<br>
+                <br>
+                [extra]<br>
+                Include = /etc/pacman.d/mirrorlist-arch<br>
+                <br>
+                [community]<br>
+                Include = /etc/pacman.d/mirrorlist-arch<br>
+                <br>
+                [multilib]<br>
+                Include = /etc/pacman.d/mirrorlist-arch<br>
+            </div>
+            <div class="text">Add these repositories to the pacman.conf</div>
+            <div class="code">sudo vim /etc/pacman.conf</div>
+            <div class="text text-in-a text-hover ">
+                Now generate the mirrorlist for arch for that go to the
+                <a href="https://archlinux.org/mirrorlist/" target="_blank">Pacman Mirrorlist Generator</a><br>
+                Make sure to create a new file /etc/pacman.d/mirrorlist-arch and paste the mirrorlist in there
+            </div>
+            <div class="code">sudo vim /etc/pacman.d/mirrorlist-arch</div>
         </div>
     </div>
     <div class="footer">

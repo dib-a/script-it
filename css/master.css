@@ -28,6 +28,8 @@ html {
 
 .navbar a{
     font-weight: 700;
+    padding: 5px !important;
+    margin: 4px 8px !important;
 }
 
 .main {
@@ -45,13 +47,13 @@ html {
 }
 
 .footer-right a{
-    color: var(--color-font-invers)!important;
+    color: var(--color-font-invers) !important;
 }
 
 .text-in-a a{
     text-decoration: none;
     color: var(--color-font);
-    padding: 4px 6px;
+    padding: 0px 0px;
     border-bottom: 1px solid transparent;
 }
 
