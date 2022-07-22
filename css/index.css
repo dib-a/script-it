@@ -19,17 +19,3 @@
     padding: 5px 70px;
     font-weight: 700;
 }
-
-.split-3 {
-    margin: 50px 0px;
-}
-
-.split-3 > div {
-    width: 33%;
-    padding: 20px;
-    margin: 0px 2px;
-}
-
-.split-3 > div a img {
-    height: 50px;
-}

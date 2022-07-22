@@ -30,3 +30,7 @@
 .left-margin {
     margin-left: 30px;
 }
+
+.table-of-content {
+    align-items: flex-start;
+}
