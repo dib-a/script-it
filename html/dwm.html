@@ -88,6 +88,17 @@
                 sudo cp dwm-config/st.h st/config.h<br>
                 sudo cp dwm-config/variables.h st/variables.h<br>
             </div>
+            <h4>3.2 Xinitrc</h4>
+            <div class="text">
+                You need to add "sh /path/to/file &" to your xinitrc<br>
+                NOTICE: add it befor the "exec dwm" command<br>
+                If you followed the Instruction it will be 
+            </div>
+            <div class="code">sh ~/progs/suckless/dwm-config/bar.sh &</div>
+            <div class="text">(Do not forget the & sign)</div>
+            <div class="code">
+                vim ~/.xinitrc
+            </div>
         </div>
     </div>
     <div class="footer">
