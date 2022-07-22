@@ -26,10 +26,13 @@ html {
     justify-content: space-between;
 }
 
-.navbar a{
-    font-weight: 700;
+.navbar a, .footer a{
     padding: 5px !important;
     margin: 4px 8px !important;
+}
+
+.navbar a {
+    font-weight: 700;
 }
 
 .main {
@@ -72,12 +75,13 @@ html {
 
 .grid-3 {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: repeat(3, 33%) ;
 }
 
 .space-top-bottom {
     margin: 100px 0px;
 }
+
 .center-items {
     display: flex;
     justify-content: center;

@@ -7,7 +7,7 @@
     padding: 10px;
 }
 
-.table-of-content ul {
+.no-bullet-points {
     list-style-type:none;
 }
 
@@ -33,4 +33,12 @@
 
 .table-of-content {
     align-items: flex-start;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.no-margin {
+    margin: 0px;
 }
