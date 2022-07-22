@@ -26,7 +26,7 @@
         </div>
         <div class="navbar-right text-in-a text-hover">
             <a href="../index.html">Home</a>
-            <a href="my-artix.html">My Artix</a>
+            <a href="artix.html">Artix</a>
             <a href="dwm.html">dwm</a>
         </div>
     </div>
@@ -42,8 +42,8 @@
             </div>
             <div class="os-logo center-items"><img src="../src/images/artix-logo.png" alt="Logo" class="logo-50px"></div>
         </div>
-        <h2>1. Installation (encrypted)</h2>
-        <div class="installation left-margin" id="installation">
+        <h2 id="installation">1. Installation (encrypted)</h2>
+        <div class="installation left-margin">
             <h4>1.1 Format Disk</h4>
             <div class="code">sudo fdisk /dev/sdX</div>
             <div class="text">Of course, you have to change the X to the path of your Disk</div>
@@ -73,8 +73,8 @@
             <div class="code">artix-chroot /mnt</div>
             <div class="text">From now on we are in the new system </div>
         </div>
-        <h2>2. Configuration</h2>
-        <div class="configuration left-margin" id="configuration">
+        <h2 id="configuration">2. Configuration</h2>
+        <div class="configuration left-margin">
             <h4>2.1 Download programs</h4>
             <div class="text">First, let's download all programs needed</div>
             <div class="code">sudo pamcan -Sy vim dhcpcd wpa_supplicant cryptsetup grub efibootmgr</div>
@@ -111,8 +111,8 @@
                 grub-mkconfig -o /boot/grub/grub.cfg
             </div>
         </div>
-        <h2>3. Add User</h2>
-        <div class="add-user left-margin" id="add-user">
+        <h2 id="add-user">3. Add User</h2>
+        <div class="add-user left-margin">
             <div class="text">To give the group wheel the rights to use sudo you have to uncomment the line %wheel ALL=(ALL:ALL) ALL</div>
             <div class="code">vim /etc/sudoers</div>
             <div class="text">Add user to the group wheel (of course you need to change user-name to the name of the user)</div>
@@ -120,8 +120,8 @@
             <div class="text">Give the user a password</div>
             <div class="code">passwd user-name</div>
         </div>
-        <h2>4. Add Arch Repositories to Artix</h2>
-        <div class="add-arch-repo left-margin" id="add-arch-repo">
+        <h2 id="add-arch-repo">4. Add Arch Repositories to Artix</h2>
+        <div class="add-arch-repo left-margin">
             <div class="text">The Arch repositories<br>(Notice that we changed the path from mirrorlist to mirrorlist-arch)</div>
             <div class="code">
                 [core]<br>
@@ -152,7 +152,7 @@
         </div>
         <div class="footer-right text-in-a center-items">
             <a href="../index.html">Home</a>
-            <a href="my-artix.html">Artix</a>
+            <a href="artix.html">Artix</a>
             <a href="dwm.html">dwm</a>
         </div>
     </div>
