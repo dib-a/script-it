@@ -10,6 +10,7 @@ body {
     background-color: var(--color-gray);
     color: var(--color-font);
     font-family: "IBM Plex Sans Arabic";
+    font-size: 20px;
     margin: 0;
     padding: 0;
 }
@@ -36,7 +37,7 @@ html {
 }
 
 .main {
-    margin: 5px 400px ;
+    margin: 5px 300px ;
 }
 
 .footer {
@@ -79,11 +80,15 @@ html {
 }
 
 .space-top-bottom {
-    margin: 100px 0px;
+    margin: 70px 0px;
 }
 
 .center-items {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.flex-column{
+    flex-direction: column;
 }
