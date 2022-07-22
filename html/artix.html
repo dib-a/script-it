@@ -67,9 +67,18 @@
                 <br>
                 mkfs.ext4 -L SYSTEM /dev/mapper/SYSTEM
             </div>
-            <h4>1.3 Install System</h4>
+            <h4>1.3 Mount Partitions</h4>
+            <div class="code">
+                mount -L SYSTEM /mnt<br>
+                mkdir /mnt/boot<br>
+                mount -L BOOT /mnt/boot<br>
+                mkdir /mnt/boot/efi<br>
+                mount -L EFI /mnt/boot/efi<br>
+                swapon -L SWAP<br>
+            </div>
+            <h4>1.4 Install System</h4>
             <div class="code">basestrap /mnt base base-devel openrc elogind-openrc linux linux-firmware</div>
-            <h4>1.4 Chroot</h4>
+            <h4>1.5 Chroot</h4>
             <div class="code">artix-chroot /mnt</div>
             <div class="text">From now on we are in the new system </div>
         </div>
