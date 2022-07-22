@@ -79,6 +79,11 @@ html {
     grid-template-columns: repeat(3, 33%) ;
 }
 
+.grid-6 {
+    display: grid;
+    grid-template-columns: repeat(6, 16.66%);
+}
+
 .space-top-bottom {
     margin: 70px 0px;
 }
