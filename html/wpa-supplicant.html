@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <title>Script it! - wpa_supplicant</title>
+    <!--meta-->
+    <meta charset="utf-8">
+    <meta name="keywords" content="Script IT!, Linux">
+    <meta name="description" content="Linux">
+    <meta name="author" content="dib-a">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--css-->
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/wpa_supplicant.css">
+
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="../src/images/logo.ico" style="border-radius: 100%;">
+
+    <!--fonts-->
+    <script src="https://kit.fontawesome.com/9c4471793c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="../index.html"><img src="../src/images/logo.png" alt="Logo"></a>
+        </div>
+        <div class="navbar-right text-in-a text-hover">
+            <a href="../index.html">Home</a>
+            <a href="artix.html">Artix</a>
+            <a href="dwm.html">dwm</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="grid-2">
+            <div class="table-of-content text-in-a text-hover center-items">
+                <ul class="no-bullet-points">
+                    <li><a href="#installation">1. Installation</a></li>
+                    <li><a href="#configuration">2. Configuration</a></li>
+                    <li><a href="#run">3. Run</a></li>
+                </ul>
+            </div>
+            <div class="os-logo center-items">wpa_supplicant</div>
+        </div>
+        <h2 id="installation">1. Installation</h2>
+        <div class="installation left-margin">
+            <div class="code">sudo pacman -S wpa_supplicant dhcpcd</div>
+        </div>
+        <h2 id="configuration">2. Configuration</h2>
+        <div class="configuration left-margin">
+            <div class="text">Create a config file in /etc/wpa_supplicant/</div>
+            <div class="code">sudo vim /etc/wpa_supplicant/home.conf</div>
+            <div class="text">The config should look like this</div>
+            <div class="code">
+            ctrl_interface=/run/wpa_supplicant<br>
+            ctrl_interface_group=wheel<br>
+            update_config=1<br>
+            ap_scan=1<br>
+            network={<br>
+                <div class="indent">
+                    ssid="SSID of the network"<br>
+                </div>
+                <div class="indent">
+                    psk="password"<br>
+                </div>
+            }
+            </div>
+        </div>
+        <h2 class="run" id="run">3. Run</h2>
+        <div class="run left-margin">
+            <div class="text">Replace wlan0 with your interface</div>
+            <div class="code">
+                sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/home.conf<br>
+            </div>
+            <div class="text">Then run</div>
+            <div class="code">sudo dhcpcd wlan0</div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-left">
+            <a href="../index.html" id="logo"><img src="../src/images/logo-black.png" alt="Logo"></a>
+        </div>
+        <div class="footer-right text-in-a center-items">
+            <a href="../index.html">Home</a>
+            <a href="artix.html">Artix</a>
+            <a href="dwm.html">dwm</a>
+            <a href="wpa-supplicant">wpa_supplicant</a>
+        </div>
+    </div>
+</body>
+</html>
